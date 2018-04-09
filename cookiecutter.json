@@ -1,0 +1,6 @@
+{
+    "project_name": "",
+    "app_name": "",
+    "app_slug": "{{ cookiecutter.app_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+    "app_python_prefix": "{{ cookiecutter.app_name.title()|replace(' ', '')|replace('-', '') }}"
+}

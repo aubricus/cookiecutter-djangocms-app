@@ -8,9 +8,14 @@ from . import models
 log = logging.getLogger(__name__)
 
 
-class {{cookiecutter.app_python_prefix}}PluginAdmin(CMSPluginBase):
+class {{cookiecutter.app_python_prefix}}AppBasePluginAdmin(CMSPluginBase):
     """
     Base CMSPluginBase class.
+
+    This is an optional base plugin admin useful for
+    sharing common customizations.
+
+    Naming CMSPluginBase Subclasses:
 
     The CMSPluginBase name is too easily confused with the backing
     model base class for plugins, CMSPlugin. Since CMSPluginBase
@@ -19,7 +24,7 @@ class {{cookiecutter.app_python_prefix}}PluginAdmin(CMSPluginBase):
     makes more sense:
 
     ```
-    class FooPluginAdmin({{cookiecutter.app_python_prefix}}):
+    class FooPluginAdmin({{cookiecutter.app_python_prefix}}AppBasePluginAdmin):
         pass
     ```
 
